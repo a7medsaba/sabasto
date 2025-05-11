@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sabasto
+    name: sabasto-bot
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
