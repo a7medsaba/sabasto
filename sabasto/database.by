@@ -1,0 +1,23 @@
+import json
+import os
+from config import *
+
+def ensure_data_dir():
+    """إنشاء مجلد data إذا لم يكن موجودًا"""
+    if not os.path.exists("data"):
+        os.makedirs("data")
+
+def get_json_data(file_path):
+    """قراءة بيانات JSON من ملف"""
+    ensure_data_dir()
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []  # يعيد قائمة فارغة إذا كان الملف غير موجود
+
+def save_json_data(file_path, data):
+    """حفظ البيانات في ملف JSON"""
+    ensure_data_dir()
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
