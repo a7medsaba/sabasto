@@ -3,5 +3,5 @@ services:
     name: sabasto-bot
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn sabasto.wsgi:application"
+    buildCommand: "pip install -r sabasto/requirements.txt"
+    startCommand: "gunicorn sabasto.wsgi:application
