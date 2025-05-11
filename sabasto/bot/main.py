@@ -1,8 +1,8 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
-from handlers.auth import AuthHandlers, GET_NAME, GET_PHONE
-from handlers.user import UserHandlers
-from handlers.admin import AdminHandlers
-from handlers.offers import OfferHandlers
+from sabasto.handlers.auth import AuthHandlers, GET_NAME, GET_PHONE
+from sabasto.handlers.user import UserHandlers
+from sabasto.handlers.admin import AdminHandlers
+from sabasto.handlers.offers import OfferHandlers
 from config import BOT_TOKEN
 
 def setup_handlers(dp):
