@@ -4,4 +4,4 @@ services:
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn sabasto.wsgi:application"
+    startCommand: "python bot/main.py"
