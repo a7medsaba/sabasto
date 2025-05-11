@@ -3,7 +3,7 @@ from sabasto.handlers.auth import AuthHandlers, GET_NAME, GET_PHONE
 from sabasto.handlers.user import UserHandlers
 from sabasto.handlers.admin import AdminHandlers
 from sabasto.handlers.offers import OfferHandlers
-from sabasto.config import BOT_TOKEN
+from config import BOT_TOKEN
 
 def setup_handlers(dp):
     # نظام التسجيل
